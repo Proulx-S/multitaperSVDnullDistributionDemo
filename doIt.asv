@@ -2,7 +2,9 @@ close all
 clear all
 %% Load example data
 %!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-%!!!! Jump to line 70 to visualize precomputed results !!!!
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+%!!!! Jump to line 71 to visualize precomputed results !!!!
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 %!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 load('exampleData.mat')
 
@@ -66,7 +68,6 @@ svd.infoTaperPerm = 'taper/vox/mode x mode x freq x perm'; % note on matrix dime
 
 % %% Save precomputed data
 % save(fullfile(wd,'exampleDataPrecomputed.mat'),'svd','-v7.3')
-%
 % %% Load precomputed data
 % load('exampleDataPrecomputed.mat','svd')
 
@@ -88,12 +89,12 @@ svd.infoTaperPerm = 'taper/vox/mode x mode x freq x perm'; % note on matrix dime
 %!!!! percentile, rankness is set to 0.
 %!!!! Figure 2 to N-1: Singluar spectra at frequencies indicated by green
 %!!!! vertical lines.
-%!!!! Figure N, top panel: "1st-mode" coherence as in Figure1, along with
-%!!!! ("low-rank") coherence including the first n significant modes in the
-%!!!! numerator, n being frequency-specific, and ("low-rank (upsampled)")
-%!!!! computed in a similar way but with n estimated on finely interpolated
-%!!!! singular spectra. Note that in "low-rank (upsampled)", rank is set to
-%!!!! 1 whenever the first mode does not exceed the 95th percentile.
+%!!!! Figure N, top panel: 1st-mode coherence as in Figure1, along with
+%!!!! (low-rank) coherence including the first n significant modes in the
+%numerator
+
+
+
 f0List = [0.048 0.271 0.371 0.937 1.118];
 plotPerm4(svd,f0List)
 %!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
