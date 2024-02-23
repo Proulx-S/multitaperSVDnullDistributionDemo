@@ -1,6 +1,16 @@
 close all
 clear all
-load exampleData.mat
+
+%% Load example data
+wd = pwd;
+if exist(fullfile(wd,'exampleData.mat'),'file')
+    % From this folder
+    load(fullfile(wd,'exampleData.mat'))
+elseif exist(fullfile([wd '_data'],'exampleData.mat'),'file')
+    % From another "_data" this folder
+    wd = [wd '_data'];
+    load(fullfile(wd,'exampleData.mat'))
+end
 
 
 %% Compute psd
