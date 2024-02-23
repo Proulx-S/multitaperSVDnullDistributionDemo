@@ -1,3 +1,4 @@
+% From Chronux toolbox (http://chronux.org/)
 function [f,findx]=getfgrid(Fs,nfft,fpass)
 % Helper function that gets the frequency grid associated with a given fft based computation
 % Called by spectral estimation routines to generate the frequency axes 
